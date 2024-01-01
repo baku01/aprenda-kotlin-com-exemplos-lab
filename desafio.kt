@@ -1,21 +1,51 @@
-// [Template no Kotlin Playground](https://pl.kotl.in/WcteahpyN)
+// Desafio: Evoluir as classes modeladas para um domínio educacional
 
 enum class Nivel { BASICO, INTERMEDIARIO, DIFICIL }
 
-class Usuario
+class Usuario(val nome: String, val email: String) {
+    // Adicione propriedades e métodos relevantes para um usuário
+}
 
-data class ConteudoEducacional(var nome: String, val duracao: Int = 60)
+data class ConteudoEducacional(var nome: String, val duracao: Int = 60) {
+    // Adicione propriedades e métodos relevantes para um conteúdo educacional
+}
 
-data class Formacao(val nome: String, var conteudos: List<ConteudoEducacional>) {
+data class Formacao(val nome: String, var conteudos: MutableList<ConteudoEducacional> = mutableListOf()) {
 
     val inscritos = mutableListOf<Usuario>()
-    
+
     fun matricular(usuario: Usuario) {
-        TODO("Utilize o parâmetro $usuario para simular uma matrícula (usar a lista de $inscritos).")
+        inscritos.add(usuario)
+        println("Usuário ${usuario.nome} matriculado na formação $nome.")
+    }
+
+    fun adicionarConteudo(conteudo: ConteudoEducacional) {
+        conteudos.add(conteudo)
+        println("Conteúdo ${conteudo.nome} adicionado à formação $nome.")
+    }
+
+    fun exibirDetalhes() {
+        println("Formação: $nome")
+        println("Conteúdos:")
+        conteudos.forEach { println("- ${it.nome}, Duração: ${it.duracao} minutos") }
+        println("Inscritos:")
+        inscritos.forEach { println("- ${it.nome}, Email: ${it.email}") }
     }
 }
 
 fun main() {
-    TODO("Analise as classes modeladas para este domínio de aplicação e pense em formas de evoluí-las.")
-    TODO("Simule alguns cenários de teste. Para isso, crie alguns objetos usando as classes em questão.")
+    // Simulação de cenários de teste
+    val usuario1 = Usuario("João", "joao@email.com")
+    val usuario2 = Usuario("Maria", "maria@email.com")
+
+    val conteudo1 = ConteudoEducacional("Introdução ao Kotlin", 90)
+    val conteudo2 = ConteudoEducacional("Programação Orientada a Objetos", 120)
+
+    val formacao = Formacao("Desenvolvimento Kotlin")
+    formacao.matricular(usuario1)
+    formacao.matricular(usuario2)
+    formacao.adicionarConteudo(conteudo1)
+    formacao.adicionarConteudo(conteudo2)
+
+    formacao.exibirDetalhes()
 }
