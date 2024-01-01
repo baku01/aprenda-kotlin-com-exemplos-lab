@@ -1,10 +1,23 @@
-# Aprenda Kotlin Com Exemplos: Desafio de Projeto (Lab)
+# Desafio de Projeto em Kotlin: Abstração de Domínio 🚀
 
-Desafio de Projeto criado para avaliação do conteúdo técnico explorado no repositório [aprenda-kotlin-com-exemplos](https://github.com/digitalinnovationone/aprenda-kotlin-com-exemplos). **Nesse contexto, iremos abstrair o seguinte domínio de aplicação:**
+Este é um desafio de projeto proposto como parte do curso [Aprenda Kotlin Com Exemplos](https://github.com/digitalinnovationone/aprenda-kotlin-com-exemplos) da Digital Innovation One.
 
-**A [DIO](https://web.dio.me) possui `Formacoes` incríveis que têm como objetivo oferecer um conjunto de `ConteudosEducacionais` voltados para uma stack tecnológica específica, preparando profissionais de TI para o mercado de trabalho. `Formacoes` possuem algumas características importantes, como `nome`, `nivel` e seus respectivos `conteudosEducacionais`. Além disso, tais experiências educacionais têm um comportamento relevante ao nosso domínio, definido pela capacidade de `matricular` um ou mais `Alunos`.**
+## Descrição do Desafio 📋
 
+O desafio envolve a abstração de um domínio de aplicação relacionado à área educacional da DIO (Digital Innovation One). O objetivo é criar classes e métodos em Kotlin que representem uma estrutura educacional, incluindo formações, conteúdos educacionais e a capacidade de matricular alunos.
 
-```kotlin
-TODO("Crie uma solução em Koltin abstraindo esse domínio. O arquivo [desafio.kt] te ajudará 😉")
-```
+## Solução 🛠️
+
+A solução foi implementada em Kotlin, utilizando classes para representar Alunos, Conteúdos Educacionais e Formações. Os métodos foram criados para realizar operações como matrícula de alunos e adição de conteúdos às formações.
+
+## Estrutura do Projeto 📁
+
+- [desafio.kt](desafio.kt): Arquivo principal contendo a solução em Kotlin.
+- [README.md](README.md): Este arquivo, fornecendo informações sobre o desafio e a solução.
+
+## Como Executar ▶️
+
+Certifique-se de ter o ambiente Kotlin configurado. Execute o arquivo `desafio.kt` para ver a solução em ação.
+
+```bash
+kotlin desafio.
