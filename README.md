@@ -20,4 +20,4 @@ A solução foi implementada em Kotlin, utilizando classes para representar Alun
 Certifique-se de ter o ambiente Kotlin configurado. Execute o arquivo `desafio.kt` para ver a solução em ação.
 
 ```bash
-kotlin desafio.
+kotlin desafio.kt
